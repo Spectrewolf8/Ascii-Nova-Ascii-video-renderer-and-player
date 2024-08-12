@@ -69,7 +69,6 @@ Realtime player screen[4]
 Help screen[5]
 ![image](https://github.com/user-attachments/assets/2889813c-6c6a-4dcf-afd3-7f2c0334390d)
 
---- 
 
 ## Reproducibility
 
@@ -95,9 +94,7 @@ The code is organized and well-documented to ensure clarity and ease of use. Key
 
 By following these guidelines and utilizing the provided documentation, users should be able to reproduce the results and understand the workings of the project with minimal effort.
 
-Still, feel lost? Create an issue.
-
---- 
+Still, feel lost? Create an issue, I'll help.
 
 ## TODO
 
