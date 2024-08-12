@@ -13,6 +13,7 @@ ASCII Nova is designed to convert video content into ASCII art and provide a dyn
 - Audio extraction and encoding in base64 format
 - JSON GZIP compression for video and audio data
 
+
 ## Installation
 
 To set up the project, you need Python 3.x and several libraries. Follow the steps below:
@@ -68,6 +69,39 @@ Realtime player screen[4]
 Help screen[5]
 ![image](https://github.com/user-attachments/assets/2889813c-6c6a-4dcf-afd3-7f2c0334390d)
 
+--- 
+
+## Reproducibility
+
+The code is organized and well-documented to ensure clarity and ease of use. Key aspects include:
+
+- **Logical Structure**: The project is structured to facilitate understanding and ease of navigation. Each module is purposefully designed to handle specific functionalities such as video playback, frame extraction, and ASCII rendering.
+
+- **Comprehensive Comments**: Detailed comments and docstrings are included throughout the code. These comments explain the purpose of classes, methods, and key sections of the code, making it easier for others to follow and modify as needed.
+
+- **Dependencies**: A `requirements.txt` file is provided to list all necessary Python libraries. This ensures that all dependencies can be easily installed and that the environment is correctly set up. You can install the required libraries using:
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- **Usage Instructions**: Clear instructions on how to run the code and utilize the main features are provided in the README. This includes setting up the environment, running the real-time ASCII player, and rendering video to ASCII.
+
+- **Code Examples**: Examples of how to use key functions and classes are included in the README. These examples demonstrate how to initialize and use the `RealTimeAsciiVideoPlayer`, `VideoObject`, and other utility functions.
+
+- **Data and Resources**: Instructions for setting up necessary data and resources (e.g., fonts and videos) are included to ensure that users can reproduce the results without missing components.
+
+- **Testing and Validation**: The code includes built-in mechanisms to handle common errors and edge cases, such as invalid file paths and missing resources. For further validation, test cases can be added to ensure the functionality remains intact with future updates.
+
+By following these guidelines and utilizing the provided documentation, users should be able to reproduce the results and understand the workings of the project with minimal effort.
+
+Still, feel lost? Create an issue.
+
+--- 
+
+## TODO
+
+If you can create an executable(.exe) for this project, that'll be cool. Features that I missed can be added.
 
 ## Contributing
 
