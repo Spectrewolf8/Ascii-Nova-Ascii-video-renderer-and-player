@@ -33,11 +33,9 @@ class AsciiVideoPlayer:
         pygame.display.set_caption("ASCII Nova")
         pygame.display.flip()
 
-        self.fps_count_render_font = pygame.font.Font(
-            "../fonts[place fonts to use here]/courier.ttf", 16
-        )
+        self.fps_count_render_font = pygame.font.Font("./fonts_dir/courier.ttf", 16)
         self.media_controls_render_font = pygame.font.Font(
-            "../fonts[place fonts to use here]/courier.ttf", 12
+            "./fonts_dir/courier.ttf", 12
         )
 
         self.clock = pygame.time.Clock()
@@ -46,7 +44,7 @@ class AsciiVideoPlayer:
         self.fontSize = 8
         self.lineHeight = 1.0
         self.showFpsSwitch = True
-        self.ascii_render_fontName = "../fonts[place fonts to use here]/courier.ttf"
+        self.ascii_render_fontName = "./fonts_dir/courier.ttf"
 
         self.fullScreen = False
 
@@ -151,7 +149,7 @@ class AsciiVideoPlayer:
         fontSize=14,
         lineheight=1.0,
         showFpsSwitch=True,
-        ascii_render_font_name="../fonts[place fonts to use here]/courier.ttf",
+        ascii_render_font_name="./fonts_dir/courier.ttf",
     ):
         music_length = pygame.mixer.Sound(
             "../temp/" + asciiVideoDict["filename"] + "_audio_decoded.mp3"
