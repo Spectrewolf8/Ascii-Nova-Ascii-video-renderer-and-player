@@ -1,6 +1,6 @@
 # ASCII Nova - Real-Time ASCII Video Player
 
-**ASCII Nova** is an innovative tool that converts video frames into ASCII art in real-time and provides an interactive video playback experience with a graphical user interface. This project demonstrates the use of computer vision, image processing, and GUI development in Python.
+**ASCII Nova** being a hobby project is an innovative tool that converts video frames into ASCII art in real-time and provides an interactive video playback experience with a graphical user interface. This project demonstrates the use of computer vision, image processing, and GUI development in Python.
 
 ## Project Overview
 
