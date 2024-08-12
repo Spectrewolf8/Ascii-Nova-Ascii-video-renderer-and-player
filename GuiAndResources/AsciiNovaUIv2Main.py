@@ -1,11 +1,11 @@
 # Created by: PyQt5 UI code generator 5.15.9
 # AsciiNovaUiV2 with minor changes implemented
 import os
+import shutil
 import threading
 from PyQt5 import QtCore, QtGui, QtWidgets
 import easygui
 from natsort import natsort
-import AsciiNovaUIResources_rc
 
 
 class Ui_MainWindow(object):
@@ -377,9 +377,7 @@ class Ui_MainWindow(object):
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferAntialias)
         self.home_screen_text_label.setFont(font)
-        self.home_screen_text_label.setStyleSheet(
-            "*{\n" "text-color:rgb(36, 31, 49);\n" "}"
-        )
+        self.home_screen_text_label.setStyleSheet("*{\n" "color:rgb(36, 31, 49);\n" "}")
         self.home_screen_text_label.setWordWrap(True)
         self.home_screen_text_label.setObjectName("home_screen_text_label")
         self.verticalLayout_4.addWidget(self.home_screen_text_label)
@@ -1542,9 +1540,35 @@ class Ui_MainWindow(object):
 
     # methods associated with events:
 
+    # copy font directory
+    def copy_directory(self, src, dst):
+        """
+        Copy a directory from src to dst.
+
+        :param src: Source directory path
+        :param dst: Destination directory path
+        """
+        if not os.path.exists(src):
+            print(f"Source directory {src} does not exist.")
+            return
+
+        if os.path.exists(dst):
+            print(f"Fonts directory found in {dst}")
+            return
+
+        try:
+            shutil.copytree(src, dst)
+            print(f"Directory copied from {src} to {dst}")
+        except Exception as e:
+            print(f"Error occurred while copying directory: {e}")
+
     # Ascii player
+
     def initializeAsciiPlayer(self):
-        fonts = os.listdir("../fonts[place fonts to use here]/")
+
+        self.copy_directory(src=os.getcwd() + "/fonts_dir/", dst="./fonts_dir/")
+
+        fonts = os.listdir("./fonts_dir/")
         fonts = natsort.natsorted(fonts, reverse=False)
         self.choose_fontComboBox.addItems(fonts)
         self.line_height_doubleSpinBox.setProperty("value", 1.0)
@@ -1611,8 +1635,7 @@ class Ui_MainWindow(object):
             AsciiVideoPlayerObject.fontSize = self.font_size_spinBox.value()
             AsciiVideoPlayerObject.fontColorHex = self.render_color_hex_lineEdit.text()
             AsciiVideoPlayerObject.font = (
-                "../fonts[place fonts to use here]/"
-                + self.choose_fontComboBox.currentText()
+                "./fonts_dir/" + self.choose_fontComboBox.currentText()
             )
             AsciiVideoPlayerObject.showFpsSwitch = self.show_fps_checkBox.isChecked()
             AsciiVideoPlayerObject.playAsciiVideo(self.path_textBrowser.toPlainText())
@@ -1746,7 +1769,7 @@ class Ui_MainWindow(object):
         print(filepath)
 
     def initializeRTAsciiPlayer(self):
-        fonts = os.listdir("../fonts[place fonts to use here]")
+        fonts = os.listdir("./fonts_dir/")
         fonts = natsort.natsorted(fonts, reverse=False)
         self.choose_fontComboBox_2.addItems(fonts)
         self.path_textBrowser_3.setHtml(
@@ -1811,8 +1834,7 @@ class Ui_MainWindow(object):
                     self.show_fps_checkBox_2.isChecked()
                 )
                 RealTimeAsciiVideoPlayerObject.ascii_render_font_name = (
-                    "../fonts[place fonts to use here]/"
-                    + self.choose_fontComboBox_2.currentText()
+                    "./fonts_dir/" + self.choose_fontComboBox_2.currentText()
                 )
                 RealTimeAsciiVideoPlayerObject.ascii_Chars = renderChars.split(" ")
                 RealTimeAsciiVideoPlayerObject.renderTextWidth = (
@@ -1869,6 +1891,9 @@ class Ui_MainWindow(object):
                     ".mp4", ".json.gz"
                 )
             )
+
+
+import GuiAndResources.AsciiNovaUIResources_rc
 
 
 def run_app():

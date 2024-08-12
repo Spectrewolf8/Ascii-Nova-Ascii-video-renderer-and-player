@@ -1,18 +1,18 @@
 import os
-import shutil
-import time
-from concurrent.futures import ThreadPoolExecutor
-
-import PyQt5
 import cv2
+import sys
+import time
+import PyQt5
+import shutil
+import base64
+import compress_json
 from PyQt5 import QtWidgets
 from natsort import natsort
-from RendererAndPlayer import ImageToAscii
-import compress_json
-import base64
-import sys
 import moviepy.editor as mvEditor
 from RendererAndPlayer import VideoObject
+from RendererAndPlayer import ImageToAscii
+from concurrent.futures import ThreadPoolExecutor
+
 
 videoPath = ""
 asciiRenderWidth = 120

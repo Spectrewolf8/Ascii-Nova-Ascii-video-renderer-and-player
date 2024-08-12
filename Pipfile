@@ -4,6 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pyqt5 = "*"
+easygui = "*"
+natsort = "*"
+opencv-python = "*"
+compress-json = "*"
+moviepy = "*"
+pygame = "*"
 
 [dev-packages]
 

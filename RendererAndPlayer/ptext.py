@@ -1,7 +1,3 @@
-# ptext module: place this in your import directory.
-
-# ptext.draw(text, pos=None, **options)
-
 # Please see README.md for explanation of options.
 # https://github.com/cosmologicon/pygame-text
 
