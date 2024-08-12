@@ -1394,7 +1394,7 @@ class Ui_MainWindow(object):
                 "p, li { white-space: pre-wrap; }\n"
                 "</style></head><body style=\" font-family:'Cascadia Code'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
                 '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'Cascadia Code\'; font-size:10pt; font-weight:600;">      ___           ___           ___                             </span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:Cascadia Code\'; font-size:10pt; font-weight:600;">     /\\  \\         /\\  \\         /\\  \\          ___         ___   </span></p>\n'
+                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:Cascadia Code\'; font-size:10pt; font-weight:600;">       /\\  \\         /\\  \\         /\\  \\          ___         ___   </span></p>\n'
                 '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'Cascadia Code\'; font-size:10pt; font-weight:600;">    /::\\  \\       /::\\  \\       /::\\  \\        /\\  \\       /\\  \\  </span></p>\n'
                 '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'Cascadia Code\'; font-size:10pt; font-weight:600;">   /:/\\:\\  \\     /:/\\ \\  \\     /:/\\:\\  \\       \\:\\  \\      \\:\\  \\ </span></p>\n'
                 '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'Cascadia Code\'; font-size:10pt; font-weight:600;">  /::\\~\\:\\  \\   _\\:\\~\\ \\  \\   /:/  \\:\\  \\      /::\\__\\     /::\\__\\</span></p>\n'
@@ -1514,7 +1514,7 @@ class Ui_MainWindow(object):
         self.help_label.setText(
             self._translate(
                 "MainWindow",
-                'You can get support and help on ASCII nova\'s <a href="https://github.com/Spectrewolf8/ASCII-Nova">github page</a>',
+                'You can get support and help on ASCII nova\'s <a href="https://github.com/Spectrewolf8/Ascii-Nova-Ascii-video-renderer-and-player">github page</a>',
             )
         )
 
@@ -1539,11 +1539,9 @@ class Ui_MainWindow(object):
 
     # methods associated with events:
 
-
     # Ascii player
 
     def initializeAsciiPlayer(self):
-
 
         fonts = os.listdir("./fonts_dir/")
         fonts = natsort.natsorted(fonts, reverse=False)
