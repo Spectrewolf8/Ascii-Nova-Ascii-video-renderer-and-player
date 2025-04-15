@@ -113,7 +113,13 @@ This project is licensed under the MIT License.
 Thanks to https://github.com/cosmologicon/pygame-text project for ptext code that served a major function in this developing ascii player functionality.
 
 ## Motivation
-I built this ASCII art video player called ASCII Nova as a passion project during the second year of my Software Engineering degree, inspired by many people playing [BAD APPLE MEME](https://github.com/Spectrewolf8/Ascii-Nova-Ascii-video-renderer-and-player/blob/main/test_files/BadAppleForPython.mp4) on different devices and electronics, I wanted to do that in ASCII. 
+<div align="center">
+  
+[![BAD APPLE](https://media1.tenor.com/m/a8xNABzWG48AAAAC/sakuya-bad-apple.gif)](https://www.youtube.com/watch?v=FtutLA63Cp8)
+  
+</div>
+
+I built this ASCII art video player called ASCII Nova as a passion project during the second year of my Software Engineering degree, inspired by many people playing ![BAD APPLE MEME](https://www.youtube.com/watch?v=FtutLA63Cp8) on different devices and electronics, I wanted to do that in ASCII. 
 
 The challenge was converting standard video frames into textual representations (ASCII art) while preserving details and providing smooth playback, each ASCII frame consisted of characters laid out line by line to form recognizable images.
 
